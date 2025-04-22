@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEAM-Labz Knowledge Base</title>
+    <style>
+        :root {
+            --primary-color: #0a2240; /* Dark blue from website */
+            --accent-color: #ff6b00; /* Orange from logo */
+            --text-color: #333;
+            --light-text: #fff;
+            --background-light: #f5f5f5;
+            --background-dark: #0a2240;
+            --section-padding: 2rem;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-light);
+        }
+        
+        header {
+            background-color: var(--background-dark);
+            color: var(--light-text);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .logo {
+            max-width: 200px;
+            height: auto;
+        }
+        
+        nav {
+            background-color: var(--accent-color);
+            padding: 1rem 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li {
+            margin: 0 1rem;
+        }
+        
+        nav ul li a {
+            color: var(--light-text);
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+            background-color: white;
+            padding: var(--section-padding);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-card {
+            background-color: var(--background-light);
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            border-radius: 4px;
+        }
+        
+        .feature-card h3 {
+            color: var(--accent-color);
+            margin-top: 0;
+        }
+        
+        footer {
+            background-color: var(--background-dark);
+            color: var(--light-text);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .mission-box {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        .mission-box h2 {
+            color: var(--light-text);
+            border-bottom-color: var(--light-text);
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+        }
+        
+        .specs-table th, .specs-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .specs-table th {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+        }
+        
+        .specs-table tr:nth-child(even) {
+            background-color: var(--background-light);
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="steam_labz_logo2.png" alt="STEAM-Labz Logo" class="logo">
+        </div>
+        <h1>STEAM-Labz Knowledge Base</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#hardware">Bus Pirate 5 Hardware</a></li>
+            <li><a href="#getting-started">Getting Started</a></li>
+            <li><a href="#applications">Applications</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#appendices">Appendices</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="introduction">
+            <div class="mission-box">
+                <h2>Our Mission</h2>
+                <p>STEAM-Labz is dedicated to empowering the next generation through accessible, innovative education in Science, Technology, Engineering, Arts, and Mathematics. We believe in breaking down barriers to STEM education and fostering creativity, critical thinking, and collaboration among learners of all backgrounds.</p>
+                <p>By integrating the arts with traditional STEM fields, we create a holistic approach to learning that prepares students not just to understand the world, but to transform it through innovation and creative problem-solving.</p>
+            </div>
+            
+            <h2>About This Knowledge Base</h2>
+            <p>Welcome to the STEAM-Labz Knowledge Base! This comprehensive resource is designed to provide you with detailed information about the Bus Pirate 5 hardware, its capabilities, and how to use it effectively in your projects and educational activities.</p>
+            
+            <p>Whether you're an educator, student, hobbyist, or professional, this knowledge base will help you understand the powerful features of the Bus Pirate 5 and how it can be used to explore and interact with various electronic components and systems.</p>
+            
+            <h3>How to Use This Knowledge Base</h3>
+            <p>This knowledge base is organized into several sections, each focusing on different aspects of the Bus Pirate 5. You can navigate through the sections using the menu at the top of the page. Here's what you'll find in each section:</p>
+            
+            <ul>
+                <li><strong>Introduction:</strong> Overview of STEAM-Labz and this knowledge base</li>
+                <li><strong>Bus Pirate 5 Hardware:</strong> Detailed specifications and features of the Bus Pirate 5</li>
+                <li><strong>Getting Started:</strong> Instructions for setting up and using the Bus Pirate 5</li>
+                <li><strong>Applications:</strong> Examples and ideas for using the Bus Pirate 5 in various projects</li>
+                <li><strong>Resources:</strong> Additional documentation, community resources, and support information</li>
+                <li><strong>Appendices:</strong> Glossary, FAQ, and compliance information</li>
+            </ul>
+        </section>
+        
+        <section id="hardware">
+            <h2>Bus Pirate 5 Hardware</h2>
+            
+            <p>The Bus Pirate 5 is the latest edition of the original universal serial interface trusted by hackers since 2008. It's a versatile tool that allows you to communicate with various electronic components and systems using common serial protocols.</p>
+            
+            <p>Whether you're troubleshooting a circuit, exploring a new chip, or prototyping a design, the Bus Pirate 5 provides a powerful and flexible interface for interacting with your hardware.</p>
+            
+            <h3>Key Features</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>RP2040</h3>
+                    <ul>
+                        <li>Based on Raspberry Pi Foundation RP2040</li>
+                        <li>128Mbit flash storage for lots of features</li>
+                        <li>Firmware developed with the Pico C language SDK</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>8 Buffered IO Pins</h3>
+                    <ul>
+                        <li>1.65-5volt operating range, 3 state</li>
+                        <li>Voltage measurement on every pin</li>
+                        <li>Toggleable 10K pull-up resistors</li>
+                        <li>10 pin x 2.54mm main header</li>
+                        <li>9 pin x 1.0mm auxiliary header</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Programmable Power Supply</h3>
+                    <ul>
+                        <li>Current Sense</li>
+                        <li>Programmable 1-5.0volt output</li>
+                        <li>Programmable 0-500mA current limit</li>
+                        <li>Resettable digital fuse</li>
+                        <li>Protection circuit</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>1Gbit NAND Flash Storage</h3>
+                    <ul>
+                        <li>Save global and mode settings</li>
+                        <li>Appears as a USB disk drive</li>
+                        <li>Future use for logs, dumps and stand-alone programming</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>LCD Display</h3>
+                    <ul>
+                        <li>320 x 240 pixel IPS all direction display</li>
+                        <li>Pin labels</li>
+                        <li>Live voltage measurements</li>
+                        <li>Live current consumption</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>18 RGB LEDs</h3>
+                    <ul>
+                        <li>Introduction demo</li>
+                        <li>Party mode</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Control</h3>
+                    <ul>
+                        <li>Just one button for escape from modes</li>
+                        <li>User input for production programming, remote hacking, etc.</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Interface</h3>
+                    <ul>
+                        <li>VT100 terminal interface</li>
+                        <li>Color interface</li>
+                        <li>Live update toolbar/monitor</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Connectivity</h3>
+                    <ul>
+                        <li>USB bootloader</li>
+                        <li>USB C connector</li>
+                        <li>Limited to USB speeds supported by RP2040</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3>Technical Specifications</h3>
+            <table class="specs-table">
+                <tr>
+                    <th>Component</th>
+                    <th>Specification</th>
+                </tr>
+                <tr>
+                    <td>Processor</td>
+                    <td>Raspberry Pi RP2040</td>
+                </tr>
+                <tr>
+                    <td>Flash Storage</td>
+                    <td>128Mbit for firmware, 1Gbit NAND for user storage</td>
+                </tr>
+                <tr>
+                    <td>IO Pins</td>
+                    <td>8 buffered pins, 1.65-5V operating range</td>
+                </tr>
+                <tr>
+                    <td>Power Supply</td>
+                    <td>Programmable 1-5V output, 0-500mA current limit</td>
+                </tr>
+                <tr>
+                    <td>Display</td>
+                    <td>320 x 240 pixel IPS LCD</td>
+                </tr>
+                <tr>
+                    <td>Indicators</td>
+                    <td>18 RGB LEDs</td>
+                </tr>
+                <tr>
+                    <td>Connectivity</td>
+                    <td>USB C connector</td>
+                </tr>
+                <tr>
+                    <td>Headers</td>
+                    <td>10 pin x 2.54mm main, 9 pin x 1.0mm auxiliary</td>
+                </tr>
+            </table>
+        </section>
+        
+        <section id="getting-started">
+            <h2>Getting Started</h2>
+            
+            <h3>Unboxing and Setup</h3>
+            <p>When you first receive your Bus Pirate 5, you'll find the following items in the package:</p>
+            <ul>
+                <li>Bus Pirate 5 REV10 with enclosure</li>
+                <li>USB C cable for power and communication</li>
+                <li>Quick start guide</li>
+            </ul>
+            
+            <p>Optional accessories that may be purchased separately include:</p>
+            <ul>
+                <li>Probe Cable Kit</li>
+                <li>Auxiliary Cable Kit</li>
+                <li>Quick Connect Adapter</li>
+            </ul>
+            
+            <h3>Basic Operations</h3>
+            <p>To get started with your Bus Pirate 5:</p>
+            <ol>
+                <li>Connect the Bus Pirate 5 to your computer using the USB C cable.</li>
+                <li>The device will appear as a USB disk drive, allowing you to access the storage.</li>
+                <li>Open a terminal program on your computer (e.g., PuTTY, Terminal, or Serial) and connect to the Bus Pirate's serial port.</li>
+                <li>Once connected, you'll see the Bus Pirate's interface in your terminal, where you can enter commands to interact with the device.</li>
+            </ol>
+            
+            <h3>Connecting to Devices</h3>
+            <p>The Bus Pirate 5 can connect to various devices using its IO pins. The main header provides 10 pins (including power and ground), while the auxiliary header provides 9 pins for additional connectivity.</p>
+            
+            <p>To connect to a device:</p>
+            <ol>
+                <li>Identify the appropriate protocol for your device (e.g., I2C, SPI, UART).</li>
+                <li>Connect the Bus Pirate's pins to your device according to the protocol's requirements.</li>
+                <li>Use the Bus Pirate's terminal interface to select the appropriate mode and configure the settings.</li>
+                <li>Send commands to interact with your device.</li>
+            </ol>
+        </section>
+        
+        <section id="applications">
+            <h2>Applications and Use Cases</h2>
+            
+            <h3>Educational Applications</h3>
+            <p>The Bus Pirate 5 is an excellent tool for educational purposes, allowing students to explore and understand various electronic components and systems. Here are some educational applications:</p>
+            
+            <ul>
+                <li><strong>Protocol Exploration:</strong> Learn about different communication protocols (I2C, SPI, UART) by interacting with devices directly.</li>
+                <li><strong>Component Testing:</strong> Test and verify the functionality of various electronic components.</li>
+                <li><strong>Circuit Debugging:</strong> Identify and troubleshoot issues in electronic circuits.</li>
+                <li><strong>Hands-on Learning:</strong> Provide students with hands-on experience in working with electronic systems.</li>
+            </ul>
+            
+            <h3>Project Ideas</h3>
+            <p>Here are some project ideas that utilize the Bus Pirate 5:</p>
+            
+            <ul>
+                <li><strong>Sensor Integration:</strong> Connect and read data from various sensors (temperature, humidity, light, etc.).</li>
+                <li><strong>Display Control:</strong> Interface with LCD or OLED displays to show information.</li>
+                <li><strong>Memory Chip Programming:</strong> Read from and write to EEPROM or flash memory chips.</li>
+                <li><strong>Motor Control:</strong> Interface with motor drivers to control motors.</li>
+                <li><strong>IoT Device Development:</strong> Prototype and test IoT devices before final implementation.</li>
+            </ul>
+            
+            <h3>Troubleshooting Tips</h3>
+            <p>When working with the Bus Pirate 5, you might encounter some issues. Here are some troubleshooting tips:</p>
+            
+            <ul>
+                <li><strong>Connection Issues:</strong> Ensure that the Bus Pirate is properly connected to your computer and that the correct serial port is selected in your terminal program.</li>
+                <li><strong>Power Problems:</strong> Check that the power supply settings are appropriate for your device. Some devices may require specific voltage levels.</li>
+                <li><strong>Communication Errors:</strong> Verify that the protocol settings (speed, polarity, etc.) match the requirements of your device.</li>
+                <li><strong>Pin Configuration:</strong> Ensure that the pins are correctly connected according to the protocol's requirements.</li>
+                <li><strong>Firmware Updates:</strong> If you're experiencing unexpected behavior, check if there's a firmware update available for your Bus Pirate.</li>
+            </ul>
+        </section>
+        
+        <section id="resources">
+            <h2>Resources</h2>
+            
+            <h3>Documentation Links</h3>
+            <p>For more detailed information about the Bus Pirate 5, refer to the following documentation:</p>
+            
+            <ul>
+                <li><a href="https://hardware.buspirate.com/introduction" target="_blank">Bus Pirate 5 Hardware Documentation</a></li>
+                <li><a href="https://hardware.buspirate.com/components" target="_blank">Component Selection and Sourcing</a></li>
+                <li><a href="https://hardware.buspirate.com/cables" target="_blank">Cables and Milled Breadboard Pins</a></li>
+                <li><a href="https://hardware.buspirate.com/enclosure" target="_blank">Injection Molded Case</a></li>
+            </ul>
+            
+            <h3>Community Resources</h3>
+            <p>Connect with the Bus Pirate community through these channels:</p>
+            
+            <ul>
+                <li><a href="https://forum.buspirate.com" target="_blank">Bus Pirate Forum</a></li>
+                <li><a href="https://blog.buspirate.com" target="_blank">Blog and Mailing List</a></li>
+                <li><a href="https://mastodon.social/@buspirate" target="_blank">Mastodon</a></li>
+                <li><a href="https://instagram.com/buspirate" target="_blank">Instagram</a></li>
+                <li><a href="https://bsky.app/profile/buspirate" target="_blank">BlueSky</a></li>
+                <li><a href="https://twitter.com/buspirate" target="_blank">Twitter</a></li>
+            </ul>
+            
+            <h3>Support Information</h3>
+            <p>If you need support with your Bus Pirate 5, you can:</p>
+            
+            <ul>
+                <li>Visit the <a href="https://forum.buspirate.com" target="_blank">Bus Pirate Forum</a> to ask questions and get help from the community.</li>
+                <li>Check the <a href="https://github.com/buspirate/hardware" target="_blank">Bus Pirate 5 Hardware GitHub repository</a> for the latest updates and issues.</li>
+                <li>Contact the Bus Pirate team through the <a href="https://hardware.buspirate.com/contact" target="_blank">Contact page</a>.</li>
+            </ul>
+        </section>
+        
+        <section id="appendices">
+            <h2>Appendices</h2>
+            
+            <h3>Glossary</h3>
+            <dl>
+                <dt>I2C (Inter-Integrated Circuit)</dt>
+                <dd>A synchronous, multi-master, multi-slave, packet switched, single-ended, serial communication bus.</dd>
+                
+                <dt>SPI (Serial Peripheral Interface)</dt>
+                <dd>A synchronous serial communication interface specification used for short-distance communication, primarily in embedded systems.</dd>
+                
+                <dt>UART (Universal Asynchronous Receiver-Transmitter)</dt>
+                <dd>A computer hardware device for asynchronous serial communication in which the data format and transmission speeds are configurable.</dd>
+                
+                <dt>RP2040</dt>
+                <dd>A microcontroller developed by Raspberry Pi Foundation, featuring dual ARM Cortex-M0+ cores.</dd>
+                
+                <dt>NAND Flash</dt>
+                <dd>A type of non-volatile storage technology that does not require power to retain data.</dd>
+                
+                <dt>IPS (In-Plane Switching)</dt>
+                <dd>A screen technology for LCD displays that offers better color reproduction and wider viewing angles.</dd>
+            </dl>
+            
+            <h3>FAQ</h3>
+            <dl>
+                <dt>What is the Bus Pirate 5?</dt>
+                <dd>The Bus Pirate 5 is a universal serial interface tool that allows you to communicate with various electronic components and systems using common serial protocols.</dd>
+                
+                <dt>What protocols does the Bus Pirate 5 support?</dt>
+                <dd>The Bus Pirate 5 supports various protocols including I2C, SPI, UART, and more.</dd>
+                
+                <dt>How do I update the firmware on my Bus Pirate 5?</dt>
+                <dd>Updating the firmware is as simple as dragging the new firmware file onto the Bus Pirate's USB disk drive.</dd>
+                
+                <dt>Can the Bus Pirate 5 be used with 3.3V and 5V devices?</dt>
+                <dd>Yes, the Bus Pirate 5 has a 1.65-5volt operating range, making it compatible with both 3.3V and 5V devices.</dd>
+                
+                <dt>What accessories are available for the Bus Pirate 5?</dt>
+                <dd>Accessories include the Probe Cable Kit, Auxiliary Cable Kit, and Quick Connect Adapter.</dd>
+            </dl>
+            
+            <h3>Compliance Information</h3>
+            <p><strong>FCC Compliance Statement:</strong> This device complies with part 15 of the FCC Rules. Operation is subject to the following two conditions: (1) this device may not cause harmful interference, and (2) this device must accept any interference received, including interference that may cause undesired operation.</p>
+            
+            <p><strong>CE Compliance:</strong> The Bus Pirate has been lab tested to comply with European CE requirements.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 STEAM-Labz. All rights reserved.</p>
+        <p>Created with ❤️ for education and innovation.</p>
+    </footer>
+</body>
+</html>
